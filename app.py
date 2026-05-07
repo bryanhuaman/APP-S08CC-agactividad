@@ -80,16 +80,24 @@ st.markdown("""
 
     /* Info lateral */
     .info-box {
-        background: #F0F7FF;
-        border: 1px solid #B3D4EE;
+        background: rgba(0, 104, 180, 0.15);
+        border: 1px solid rgba(0, 104, 180, 0.4);
         border-radius: 10px;
         padding: 1rem 1.1rem;
         font-size: 0.84rem;
-        color: #2C2C2C;
+        color: inherit;
         margin-bottom: 1rem;
     }
     .info-box strong {
-        color: #0068B4;
+        color: #5BB8FF;
+    }
+
+    /* Temas del sidebar — visibles en modo claro Y oscuro */
+    .tema-item {
+        font-size: 0.83rem;
+        padding: 0.25rem 0;
+        color: inherit;
+        opacity: 0.9;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -213,8 +221,7 @@ with st.sidebar:
         "🔷 Meta-aprendizaje y adaptabilidad",
     ]
     for t in temas:
-        st.markdown(f"<div style='font-size:0.83rem; padding:0.2rem 0; color:#2C2C2C'>{t}</div>",
-                    unsafe_allow_html=True)
+        st.markdown(f"<div class='tema-item'>{t}</div>", unsafe_allow_html=True)
 
     st.divider()
 
